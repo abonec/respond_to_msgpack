@@ -1,6 +1,13 @@
 = respond_to_msgpack
 
-Description goes here.
+Let respond to msgpack in rails
+
+== Usage
+
+  respond_to do |format|
+    format.html
+    format.msgpack { render msgpack: @categories, only: [:name, :slug], include: { items: { only: [ :id, :name, :slug, :path, :price_for_day, :price_for_week, :price_for_month ] } } }
+  end
 
 == Contributing to respond_to_msgpack
  
