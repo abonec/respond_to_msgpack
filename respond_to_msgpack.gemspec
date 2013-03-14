@@ -20,11 +20,14 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/core_ext.rb",
     "lib/respond_to_msgpack.rb",
+    "respond_to_msgpack.gemspec",
     "spec/respond_to_msgpack_spec.rb",
     "spec/spec_helper.rb"
   ]

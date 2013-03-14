@@ -5,10 +5,13 @@ if defined? ActiveRecord::Base
     end
   end
 end
-[Date, Time, DateTime].each do |klass|
-  klass.class_eval do
-    def to_msgpack *args
-      as_json.to_msgpack *args
+[:Date, :Time, :DateTime].each do |klass|
+  begin
+    Object.const_get(klass).class_eval do
+      def to_msgpack *args
+        as_json.to_msgpack *args
+      end
     end
+  rescue
   end
 end
